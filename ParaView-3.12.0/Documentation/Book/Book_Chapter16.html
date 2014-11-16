@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+        <TITLE>ParaView User's Guide (v3.10)</TITLE>
+        <META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Unix)">
+        <META NAME="CREATED" CONTENT="0;0">
+        <META NAME="CHANGED" CONTENT="0;0">
+        <META NAME="Rights" CONTENT="GFDL">
+        <STYLE TYPE="text/css">
+        <!--
+                @page { margin: 0.79in }
+                P { margin-bottom: 0.08in }
+                EM.western { font-family: "DejaVu Serif", serif }
+                EM.cjk { font-style: normal }
+                EM.ctl { font-style: normal }
+                A:link { so-language: zxx }
+        -->
+        </STYLE>
+</HEAD>
+<BODY DIR="LTR">
+<DIV ID=" Included Plugins" DIR="LTR">
+        <P STYLE="margin-bottom: 0.15in; page-break-after: avoid"><FONT FACE="DejaVu Sans, sans-serif"><FONT SIZE=6>Included
+        Plugins</FONT></FONT></P>
+        <DIV ID="Included Plugins " DIR="LTR">
+                <P STYLE="margin-top: 0.3in; margin-bottom: 0.15in; page-break-after: avoid">
+                <FONT FACE="DejaVu Sans, sans-serif"><FONT SIZE=5 STYLE="font-size: 20pt">Included
+                Plugins </FONT></FONT>
+                </P>
+                <P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                <FONT FACE="DejaVu Serif, serif"><FONT SIZE=3>ParaView comes with a
+                collection of plugins that the community has developed. </FONT></FONT>
+                </P>
+                <UL>
+                        <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+                  SIZE=3><b>Adios</b> : Loads pixie format files written
+                        with the Adios library. This reader support the staging capability
+                        of Adios which allow the user to pipe simulation kernels to
+                        post-processing tools : such as ParaView throw MPI communication
+                        channel and follow in live the computation with no disk IO. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT SIZE=3><b>Eye Dome Lighting</b> : A non-photorealistic shading
+                        technique designed at EDF (France) to improve depth perception in
+                        scientific visualization images. It relies on efficient
+                        post-processing passes implemented on the GPU with GLSL shaders in
+                        order to achieve interactive rendering. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+                  SIZE=3><A
+                  HREF="http://paraview.org/Wiki/index.php?title=CoProcessing"><b>CoProcessingPlugin</b></A>:
+                  Adds extensions to enable
+                        exporting state files that can be used by ParaView CoProcessing
+                        library. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Force Time</b>: Overrides the VTK time requests.
+                        This can be used to create complex animation with different
+                        datasets following independent times evolutions. Note: As this filter overrides
+                        the time requests, time-aware filters such as PathLines or
+                        PlotOverTime will not behave correctly if they are inserted in a
+                        pipeline after this filter. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>H5PartReader </b>: The H5Part Reader plugin adds
+                        support for reading particle datasets stored in H5Part format.
+                        H5Part is a simple wrapper around the HDF5 library and provides a
+                        number of convenience functions to manage time steps and access
+                        field arrays. The reader supports parallel reading of data using
+                        hyperslabs, when used with ParaView compiled with MPI and HDF5
+                        with parallel IO enabled, the reader automatically uses hyperslabs
+                        to read portions of data on each process. </FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Nifti</b>: Reads time varying
+                        volumetric/image data from ANALYZE. Supports single (.nii) and
+                        dual (.img &amp; .hdr) file storage including
+zlib compression. Able to write out ascii or binary
+                        files. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Manta View</b>: A view that uses the University
+                        of Utah's Manta Real Time Ray Tracer instead of OpenGL for
+                        rendering surfaces <A HREF="http://www.kitware.com/products/html/RenderedRealismAtNearlyRealTimeRates.html">Kitware
+                        Source Article</A></FONT></FONT></P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Moments</b>: Contains a set of filters that
+                        helps analysis of flux and circulation fields. Flux fields are
+                        defined on 2D cells and describe flows through the area of the
+                        cell. Circulation fields are defined on 1D cells and describes
+                        flows in the direction of the cell. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>PointSprite</b>: Adds a renderer for point
+                        geometry - in particular particle based datasets (though any point
+                        based data may be rendered using the provided painter). The plugin
+                        permits 3 modes of rendering, which are (in increasing order of
+                        complexity), Simple points, texture mapped sprites, and GPU
+                        raytraced spheres. The simple point mode allows the user to select
+                        a scalar array for the opacity on a per point basis. The texture
+                        mode adds support for opacity and radius per point (particle)
+                        which is drawn using a user supplied texture (a sphere is provided
+                        by default). The GPU mode differs by evaluating a quadric
+                        ray/sphere intersection that allow objects to intersect correctly
+                        rather than ‘popping’ in and out of view as sprites do.
+                        Transfer function editors can be used to map radius/opacity values
+                        if simple non-linear lookups are required </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>SierraPlotTools</b>: Adds toolbar buttons to carry out
+                        convenience macros such as toggling the background color between
+                        white and black, switching between surface and surface with edges
+                        display mode, and opening a wizard for generating plots of global,
+                        nodal, or element variables over time. This plugin works on Exodus
+                        data only </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>SLACTools</b>: An extension that streamline
+                        ParaView's user interface for Stanford Linear Accelerator users. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Streaming View</b>: Views that render in many
+                        streamed passes to reduce memory footprint and provide
+                        multiresolution rendering. This plugin replaces the Streaming and
+                        Adaptive ParaView derived applications. <A HREF="http://www.kitware.com/products/html/MultiResolutionStreamingInVTKAndParaView.html">Kitware
+                        Source Article</A> </FONT></FONT></P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>SurfaceLIC</b>: Adds support for Line Integral
+                        Convolution over arbitrary surfaces. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>Prism Plugin</b>: A Sandia contributed plugin for
+                        verification and debugging of simulation results. The plugin reads
+                        SESAME files to determine the inverse mapping from cartesian to
+                        phase space and allows users to visually debug
+                        simulations. Sesame files hold material model
+                        data (Equations of State, Opacities, Conductivities) in a tabular
+                        format as described by http://t1web.lanl.gov/doc/SESAME_3Ddatabase_1992.html.
+                        </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>pvblot</b>: Implementation of a Sandia
+                        National Labs scripting language on top of ParaView. </FONT></FONT>
+                        </P>
+                       <LI><P LANG="en-US" ALIGN=LEFT STYLE="margin-top: 0.04in; margin-bottom: 0.05in; page-break-inside: avoid; widows: 3">
+                        <FONT FACE="DejaVu Serif, serif"><FONT
+SIZE=3><b>VisTrails</b>: The VisTrails plugin for ParaView
+                        incorporates the provenance management capabilities of VisTrails
+                        into ParaView. All of the actions a user
+                        performs while building and modifying a pipeline in ParaView are
+                        captured by the plugin. This allows navigation of all of the
+                        pipeline versions that have previously been explored. For more information about this
+                        plugin see <A HREF="http://www.vistrails.org/index.php/ParaView_Plugin">[7]</A></FONT></FONT></P>
+                </UL>
+        </DIV>
+</DIV>
+</BODY>
+</HTML>
